@@ -15,25 +15,33 @@
     </head>
 
     <body>
-        <header>
-            <h1>Kennedy Family Recipes</h1>
-            <nav>
-                <ul>
-                    <li class="nav__item"><a href="{{ url_for('recipes.recipes') }}" class="nav__link">Recipes</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="grid-container">
+            <header class="card-overlay-light">
+                <h1>Kennedy Family Recipes</h1>
+                <nav>
+                    <ul>
+                        <li class="nav__item"><a href="{{ url_for('recipes.recipes') }}" class="nav__link">Recipes</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <main class="content">
-            <!-- child template -->
-            {% block content %}
-            {% endblock %}
-        </main>
+            <aside class="card-overlay-light">
+                <h2>About</h2>
+                <p>Welcome to our recipe blog where we share our favorite family recipes that are focused on Dairy-Free and Soy-Free cooking.</p>
+                <p>Check out the blog section for helpful tips and tricks for making these recipes and some of our favorite kitchen tools.</p>
+            </aside>
 
-        <footer>
-            <p>Created by Patrick Kennedy (2021)</p>
-        </footer>
-    </body>
+            <main class="content">
+                <!-- child template -->
+                {% block content %}
+                {% endblock %}
+            </main>
+
+            <footer>
+                <p>Created by Patrick Kennedy (2021)</p>
+            </footer>
+        </body>
+    </div>
 </html>
